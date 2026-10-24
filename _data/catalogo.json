@@ -1,34 +1,407 @@
 {
-  "_nota": "Catalogo dello shop (serve solo con ecommerce: true in _config.yml). Prezzi in CENTESIMI. Ogni prodotto/categoria ha anche una pagina in _negozio/ (layout negozio-prodotto con pid=<id>, negozio-categoria con cid=<id>). L'id categoria e' riservato. tipo: digitale (niente spedizione) o fisico. visibile:false nasconde senza cancellare. TRADUZIONI: ogni categoria/prodotto puo' avere \"tr\": {\"en\": {\"nome\": \"...\", \"descrizione\": \"...\", \"descrizione_completa\": \"...\"}}; campo mancante = si usa l'italiano.",
+  "_nota": "ALBA MARIS (cosmetica di lusso, DEMO). Catalogo piatto: categorie senza reparti. Prezzi in centesimi. Fonte UNICA di /negozio/ e delle pagine prodotto. L'id \"categoria\" e' riservato. Testi e formule di esempio: da verificare prima della vendita. TRADUZIONI: \"tr\": {\"en\": {...}}; campo mancante = si usa l'italiano.",
   "categorie": [
     {
-      "nome": "Esempio",
-      "id": "esempio",
-      "icona": "🛍️",
+      "id": "creme-viso",
+      "nome": "Creme viso",
+      "icona": "",
       "tr": {
         "en": {
-          "nome": "Example"
+          "nome": "Face creams"
+        }
+      }
+    },
+    {
+      "id": "contorno-occhi",
+      "nome": "Contorno occhi",
+      "icona": "",
+      "tr": {
+        "en": {
+          "nome": "Eye care"
+        }
+      }
+    },
+    {
+      "id": "creme-mani",
+      "nome": "Creme mani",
+      "icona": "",
+      "tr": {
+        "en": {
+          "nome": "Hand creams"
+        }
+      }
+    },
+    {
+      "id": "creme-corpo",
+      "nome": "Creme corpo",
+      "icona": "",
+      "tr": {
+        "en": {
+          "nome": "Body creams"
+        }
+      }
+    },
+    {
+      "id": "labbra",
+      "nome": "Labbra",
+      "icona": "",
+      "tr": {
+        "en": {
+          "nome": "Lips"
+        }
+      }
+    },
+    {
+      "id": "set-regalo",
+      "nome": "Set regalo",
+      "icona": "",
+      "tr": {
+        "en": {
+          "nome": "Gift sets"
         }
       }
     }
   ],
   "prodotti": [
     {
-      "tipo": "digitale",
-      "id": "prodotto-esempio",
-      "nome": "Prodotto di esempio",
-      "categoria": "esempio",
-      "prezzo_centesimi": 1000,
-      "descrizione": "Descrizione breve del prodotto di esempio.",
-      "descrizione_completa": "Descrizione completa del prodotto.\nOgni riga diventa un paragrafo.",
-      "immagine": "",
-      "icona": "🛍️",
+      "id": "la-crema-originale",
+      "nome": "La Crema Originale",
+      "descrizione": "La crema simbolo di Alba Maris: ricca, avvolgente, per una pelle morbida e luminosa.",
+      "descrizione_completa": "Il cuore della collezione.\nUna texture ricca che si scioglie al calore delle dita e lascia la pelle morbida, confortata e luminosa.\nFormulata con estratto di alga bruna e oli preziosi.\nUso: mattina e sera su viso e collo.",
+      "categoria": "creme-viso",
+      "icona": "✦",
+      "tipo": "fisico",
+      "prezzo_centesimi": 32000,
+      "immagine": "assets/img/prodotti/la-crema-originale.svg",
       "visibile": true,
       "tr": {
         "en": {
-          "nome": "Example product",
-          "descrizione": "Short description of the example product.",
-          "descrizione_completa": "Full description of the product.\nEach line becomes a paragraph."
+          "nome": "The Original Cream",
+          "descrizione": "The signature Alba Maris cream: rich and enveloping, for soft, luminous skin.",
+          "descrizione_completa": "The heart of the collection.\nA rich texture that melts at the warmth of your fingers and leaves skin soft, comforted and luminous.\nFormulated with brown seaweed extract and precious oils.\nUse: morning and evening on face and neck."
+        }
+      }
+    },
+    {
+      "id": "crema-leggera-giorno",
+      "nome": "Crema Leggera Giorno",
+      "descrizione": "Texture fresca e setosa, ideale sotto il trucco.",
+      "descrizione_completa": "Una crema fluida che si assorbe subito.\nIdrata senza appesantire e prepara la pelle al make-up.\nUso: ogni mattina su viso e collo.",
+      "categoria": "creme-viso",
+      "icona": "✦",
+      "tipo": "fisico",
+      "prezzo_centesimi": 24000,
+      "immagine": "assets/img/prodotti/crema-leggera-giorno.svg",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Light Day Cream",
+          "descrizione": "A fresh, silky texture, ideal under make-up.",
+          "descrizione_completa": "A fluid cream that is absorbed quickly.\nIt hydrates without weighing down and prepares skin for make-up.\nUse: every morning on face and neck."
+        }
+      }
+    },
+    {
+      "id": "crema-notte-rigenerante",
+      "nome": "Crema Notte Rigenerante",
+      "descrizione": "Ricca e avvolgente, accompagna il riposo della pelle.",
+      "descrizione_completa": "Una crema da notte dalla texture piena.\nNutre mentre dormi e al risveglio la pelle appare riposata.\nUso: ogni sera su viso e collo.",
+      "categoria": "creme-viso",
+      "icona": "✦",
+      "tipo": "fisico",
+      "prezzo_centesimi": 29000,
+      "immagine": "assets/img/prodotti/crema-notte-rigenerante.svg",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Regenerating Night Cream",
+          "descrizione": "Rich and enveloping, it accompanies the skin's rest.",
+          "descrizione_completa": "A night cream with a full texture.\nIt nourishes while you sleep and in the morning skin looks rested.\nUse: every evening on face and neck."
+        }
+      }
+    },
+    {
+      "id": "contorno-occhi-concentrato",
+      "nome": "Contorno Occhi Concentrato",
+      "descrizione": "Cura concentrata per uno sguardo più riposato.",
+      "descrizione_completa": "Una formula mirata e delicata.\nRinfresca e leviga la zona dell'occhio.\nUso: picchiettare con l'anulare mattina e sera.",
+      "categoria": "contorno-occhi",
+      "icona": "✦",
+      "tipo": "fisico",
+      "prezzo_centesimi": 22000,
+      "immagine": "assets/img/prodotti/contorno-occhi-concentrato.svg",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Concentrated Eye Contour",
+          "descrizione": "Concentrated care for a more rested look.",
+          "descrizione_completa": "A targeted, gentle formula.\nIt refreshes and smooths the eye area.\nUse: pat in with the ring finger morning and evening."
+        }
+      }
+    },
+    {
+      "id": "balsamo-occhi-intenso",
+      "nome": "Balsamo Occhi Intenso",
+      "descrizione": "Un balsamo ricco per la pelle più sottile del viso.",
+      "descrizione_completa": "Una texture burrosa che nutre a fondo.\nIdeale la sera, per svegliarsi con uno sguardo più disteso.\nUso: una piccola quantità ogni sera.",
+      "categoria": "contorno-occhi",
+      "icona": "✦",
+      "tipo": "fisico",
+      "prezzo_centesimi": 23500,
+      "immagine": "assets/img/prodotti/balsamo-occhi-intenso.svg",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Intense Eye Balm",
+          "descrizione": "A rich balm for the thinnest skin of the face.",
+          "descrizione_completa": "A buttery texture that nourishes deeply.\nIdeal in the evening, to wake up with a more relaxed look.\nUse: a small amount every evening."
+        }
+      }
+    },
+    {
+      "id": "siero-occhi-lifting",
+      "nome": "Siero Occhi Lifting",
+      "descrizione": "Siero fresco con applicatore che dona tono.",
+      "descrizione_completa": "Un siero leggero con applicatore a sfera.\nDa usare al mattino per un effetto fresco e tonico.\nUso: mattina, prima della crema.",
+      "categoria": "contorno-occhi",
+      "icona": "✦",
+      "tipo": "fisico",
+      "prezzo_centesimi": 20500,
+      "immagine": "assets/img/prodotti/siero-occhi-lifting.svg",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Lifting Eye Serum",
+          "descrizione": "A fresh serum with an applicator that tones.",
+          "descrizione_completa": "A light serum with a roller-ball applicator.\nTo be used in the morning for a fresh, toning effect.\nUse: morning, before the cream."
+        }
+      }
+    },
+    {
+      "id": "crema-mani-seta",
+      "nome": "Crema Mani Seta",
+      "descrizione": "Texture vellutata che si assorbe subito e lascia le mani morbide.",
+      "descrizione_completa": "Una crema mani leggera, mai unta.\nSi assorbe in pochi secondi e profuma delicatamente.\nUso: ogni volta che serve, anche in borsa.",
+      "categoria": "creme-mani",
+      "icona": "✦",
+      "tipo": "fisico",
+      "prezzo_centesimi": 6800,
+      "immagine": "assets/img/prodotti/crema-mani-seta.svg",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Silk Hand Cream",
+          "descrizione": "A velvety texture that absorbs quickly and leaves hands soft.",
+          "descrizione_completa": "A light hand cream, never greasy.\nIt absorbs in a few seconds and has a delicate scent.\nUse: whenever needed, even in your bag."
+        }
+      }
+    },
+    {
+      "id": "crema-mani-notte",
+      "nome": "Crema Mani Notte",
+      "descrizione": "Ricca, da applicare la sera per mani riposate al mattino.",
+      "descrizione_completa": "Una formula piena che nutre a fondo.\nUso: massaggiare sulle mani la sera.",
+      "categoria": "creme-mani",
+      "icona": "✦",
+      "tipo": "fisico",
+      "prezzo_centesimi": 7200,
+      "immagine": "assets/img/prodotti/crema-mani-notte.svg",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Night Hand Cream",
+          "descrizione": "Rich, to apply in the evening for rested hands in the morning.",
+          "descrizione_completa": "A full formula that nourishes deeply.\nUse: massage into the hands in the evening."
+        }
+      }
+    },
+    {
+      "id": "crema-mani-unghie",
+      "nome": "Crema Mani e Unghie",
+      "descrizione": "Nutre le mani e si prende cura di unghie e cuticole.",
+      "descrizione_completa": "Una crema ricca di oli vegetali.\nUso: massaggiare anche su unghie e cuticole.",
+      "categoria": "creme-mani",
+      "icona": "✦",
+      "tipo": "fisico",
+      "prezzo_centesimi": 5800,
+      "immagine": "assets/img/prodotti/crema-mani-unghie.svg",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Hand and Nail Cream",
+          "descrizione": "Nourishes the hands and cares for nails and cuticles.",
+          "descrizione_completa": "A cream rich in plant oils.\nUse: massage in, also onto nails and cuticles."
+        }
+      }
+    },
+    {
+      "id": "crema-corpo-ricca",
+      "nome": "Crema Corpo Ricca",
+      "descrizione": "Una crema corpo avvolgente per una pelle morbida.",
+      "descrizione_completa": "Texture ricca e profumo delicato di mare.\nUso: dopo la doccia su tutto il corpo.",
+      "categoria": "creme-corpo",
+      "icona": "✦",
+      "tipo": "fisico",
+      "prezzo_centesimi": 14000,
+      "immagine": "assets/img/prodotti/crema-corpo-ricca.svg",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Rich Body Cream",
+          "descrizione": "An enveloping body cream for soft skin.",
+          "descrizione_completa": "Rich texture and a delicate scent of the sea.\nUse: after the shower on the whole body."
+        }
+      }
+    },
+    {
+      "id": "latte-corpo-leggero",
+      "nome": "Latte Corpo Leggero",
+      "descrizione": "Fluido e fresco, si assorbe all'istante.",
+      "descrizione_completa": "Un latte leggero, adatto anche all'estate.\nUso: ogni giorno su tutto il corpo.",
+      "categoria": "creme-corpo",
+      "icona": "✦",
+      "tipo": "fisico",
+      "prezzo_centesimi": 12000,
+      "immagine": "assets/img/prodotti/latte-corpo-leggero.svg",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Light Body Milk",
+          "descrizione": "Fluid and fresh, it absorbs instantly.",
+          "descrizione_completa": "A light milk, suitable for summer too.\nUse: every day on the whole body."
+        }
+      }
+    },
+    {
+      "id": "burro-corpo-alghe",
+      "nome": "Burro Corpo alle Alghe",
+      "descrizione": "Un burro ricco con estratto di alga bruna.",
+      "descrizione_completa": "Per le pelli più secche e nei mesi freddi.\nUso: massaggiare dopo il bagno.",
+      "categoria": "creme-corpo",
+      "icona": "✦",
+      "tipo": "fisico",
+      "prezzo_centesimi": 16000,
+      "immagine": "assets/img/prodotti/burro-corpo-alghe.svg",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Seaweed Body Butter",
+          "descrizione": "A rich butter with brown seaweed extract.",
+          "descrizione_completa": "For the driest skin and in the cold months.\nUse: massage in after the bath."
+        }
+      }
+    },
+    {
+      "id": "balsamo-labbra-originale",
+      "nome": "Balsamo Labbra Originale",
+      "descrizione": "Il balsamo che protegge e ammorbidisce.",
+      "descrizione_completa": "Un balsamo in stick, pratico e cremoso.\nUso: ogni volta che serve.",
+      "categoria": "labbra",
+      "icona": "✦",
+      "tipo": "fisico",
+      "prezzo_centesimi": 4500,
+      "immagine": "assets/img/prodotti/balsamo-labbra-originale.svg",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Original Lip Balm",
+          "descrizione": "The balm that protects and softens.",
+          "descrizione_completa": "A stick balm, practical and creamy.\nUse: whenever needed."
+        }
+      }
+    },
+    {
+      "id": "maschera-labbra-notte",
+      "nome": "Maschera Labbra Notte",
+      "descrizione": "Una maschera ricca per labbra morbide al risveglio.",
+      "descrizione_completa": "Da applicare la sera in uno strato generoso.\nUso: ogni sera.",
+      "categoria": "labbra",
+      "icona": "✦",
+      "tipo": "fisico",
+      "prezzo_centesimi": 5200,
+      "immagine": "assets/img/prodotti/maschera-labbra-notte.svg",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Night Lip Mask",
+          "descrizione": "A rich mask for soft lips on waking.",
+          "descrizione_completa": "To be applied in the evening in a generous layer.\nUse: every evening."
+        }
+      }
+    },
+    {
+      "id": "balsamo-labbra-perla",
+      "nome": "Balsamo Labbra Perla",
+      "descrizione": "Un velo di luce e di morbidezza.",
+      "descrizione_completa": "Un balsamo con riflessi perlati.\nUso: ogni volta che serve.",
+      "categoria": "labbra",
+      "icona": "✦",
+      "tipo": "fisico",
+      "prezzo_centesimi": 3800,
+      "immagine": "assets/img/prodotti/balsamo-labbra-perla.svg",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Pearl Lip Balm",
+          "descrizione": "A veil of light and softness.",
+          "descrizione_completa": "A balm with pearly reflections.\nUse: whenever needed."
+        }
+      }
+    },
+    {
+      "id": "set-rituale-viso",
+      "nome": "Set Rituale Viso",
+      "descrizione": "La Crema Originale e il Contorno Occhi Concentrato in confezione regalo.",
+      "descrizione_completa": "Il set perfetto per iniziare.\nContiene La Crema Originale (50 ml) e il Contorno Occhi Concentrato (15 ml).",
+      "categoria": "set-regalo",
+      "icona": "✦",
+      "tipo": "fisico",
+      "prezzo_centesimi": 49000,
+      "immagine": "assets/img/prodotti/set-rituale-viso.svg",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Face Ritual Set",
+          "descrizione": "The Original Cream and the Concentrated Eye Contour in a gift box.",
+          "descrizione_completa": "The perfect set to begin with.\nContains The Original Cream (50 ml) and the Concentrated Eye Contour (15 ml)."
+        }
+      }
+    },
+    {
+      "id": "set-mani-labbra",
+      "nome": "Set Mani e Labbra",
+      "descrizione": "Crema Mani Seta e Balsamo Labbra Originale in confezione regalo.",
+      "descrizione_completa": "Un regalo piccolo e prezioso.\nContiene Crema Mani Seta (75 ml) e Balsamo Labbra Originale (10 g).",
+      "categoria": "set-regalo",
+      "icona": "✦",
+      "tipo": "fisico",
+      "prezzo_centesimi": 9800,
+      "immagine": "assets/img/prodotti/set-mani-labbra.svg",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Hands and Lips Set",
+          "descrizione": "Silk Hand Cream and Original Lip Balm in a gift box.",
+          "descrizione_completa": "A small, precious gift.\nContains Silk Hand Cream (75 ml) and Original Lip Balm (10 g)."
+        }
+      }
+    },
+    {
+      "id": "set-corpo-benessere",
+      "nome": "Set Corpo Benessere",
+      "descrizione": "Crema Corpo Ricca e Burro Corpo alle Alghe in confezione regalo.",
+      "descrizione_completa": "Per concedersi una coccola.\nContiene Crema Corpo Ricca (200 ml) e Burro Corpo alle Alghe (200 ml).",
+      "categoria": "set-regalo",
+      "icona": "✦",
+      "tipo": "fisico",
+      "prezzo_centesimi": 25000,
+      "immagine": "assets/img/prodotti/set-corpo-benessere.svg",
+      "visibile": true,
+      "tr": {
+        "en": {
+          "nome": "Body Wellness Set",
+          "descrizione": "Rich Body Cream and Seaweed Body Butter in a gift box.",
+          "descrizione_completa": "To treat yourself.\nContains Rich Body Cream (200 ml) and Seaweed Body Butter (200 ml)."
         }
       }
     }

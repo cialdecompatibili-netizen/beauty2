@@ -31,3 +31,20 @@
 # Per levare una tendina: cancella il blocco, la voce torna un link normale.
 # Documentazione del funzionamento: commento in testa a _includes/masthead.html.
 # =====================================================================================
+
+Negozio:
+  - title: "Tutti i prodotti"
+    url: /negozio/
+  - divider: true
+  - title: "Creme viso"
+    url: /negozio/categoria/creme-viso/
+  - title: "Contorno occhi"
+    url: /negozio/categoria/contorno-occhi/
+  - title: "Creme mani"
+    url: /negozio/categoria/creme-mani/
+  - title: "Creme corpo"
+    url: /negozio/categoria/creme-corpo/
+  - title: "Labbra"
+    url: /negozio/categoria/labbra/
+  - title: "Set regalo"
+    url: /negozio/categoria/set-regalo/

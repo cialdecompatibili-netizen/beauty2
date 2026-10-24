@@ -1,1 +1,18 @@
 # English dropdown menus (empty = none). Each key must be IDENTICAL to a title in navigation.yml of this folder.
+
+Shop:
+  - title: "All products"
+    url: /en/shop/
+  - divider: true
+  - title: "Face creams"
+    url: /en/shop/category/face-creams/
+  - title: "Eye care"
+    url: /en/shop/category/eye-care/
+  - title: "Hand creams"
+    url: /en/shop/category/hand-creams/
+  - title: "Body creams"
+    url: /en/shop/category/body-creams/
+  - title: "Lips"
+    url: /en/shop/category/lips/
+  - title: "Gift sets"
+    url: /en/shop/category/gift-sets/
